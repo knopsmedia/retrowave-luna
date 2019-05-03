@@ -51,6 +51,8 @@
         {% if product.has_default_option %}
           {{ product.option | hidden_option_input }}
         {% else %}
+					<!-- <label class="product-option-group-label" for="option">Option Group Name</label> -->
+
           <div class="select">
             <select id="option" name="[cart][add][id]" aria-label="Select option">
               {% for option in product.options %}
