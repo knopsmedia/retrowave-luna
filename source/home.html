@@ -1,3 +1,40 @@
+{% assign page_title = 'De uniekste tweedehands GameBoys' %}
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="{{ 'gaming.png' | theme_image_url | constrain: 320 }}" alt="" class="illustration-gaming">
+    </div>
+    <div class="column">
+      <h1 class="page-title">{{ page_title }}</h1>
+      <ul class="list-style-none ps-0">
+        <li class="lh-2"><i class="icon-check"></i> Top <strong>conditie</strong>: zo goed als nieuw</li>
+        <li class="lh-2"><i class="icon-check"></i> Voor <strong>24:00 besteld</strong>, volgende werkdag versuurd</li>
+        <li class="lh-2"><i class="icon-check"></i> Veilig betalen met <strong>Stripe</strong> of <strong>PayPal</strong></li>
+        <li class="lh-2"><i class="icon-check"></i> Gratis <strong>verzending</strong> boven de &euro;100</li>
+        <li class="lh-2"><i class="icon-check"></i> <strong>30 dagen</strong> gratis garantie</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container our-process">
+  <div class="row">
+    <div class="column">
+      <h2 class="text-color-blue">Opkopen</h2>
+      <p>We zoeken het hele web door en kopen beschadigde en kapotte tweedehands gameboys op over de hele wereld</p>
+    </div>
+    <div class="column">
+      <h2 class="text-color-blue">Reparatie</h2>
+      <p>Eens we de GameBoys ontvangen kijken we wat er mis is en vervangen we de beschadigde onderdelen indien nodig.</p>
+    </div>
+    <div class="column">
+      <h2 class="text-color-blue">Modificatie</h2>
+      <p>De laatste stap is het modden van de toestellen zodat elke verzamelaar het unieke toestel van zijn dromen kan terugvinden.</p>
+    </div>
+  </div>
+</div>
+
 {% if theme.image_sets.slideshow.size > 0 %}
   <div class="flexslider home-slideshow">
     <ul class="slides">
@@ -33,7 +70,7 @@
 {% assign thumb_constrain_width = 30 %}
 {% assign thumb_constrain_height = 30 %}
 
-<h1 class="visually-hidden">Featured Products</h1>
+<h2 class="visually-hidden">Featured Products</h2>
 {% if theme.featured_items > 0 %}
   {% get products from products.all limit:theme.featured_items order:theme.featured_order %}
     {% if products != blank %}

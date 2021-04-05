@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ page.name }} | {{ store.name }}</title>
+    {% capture page_title %}
+      {% if page.name == 'Home' %}
+        De uniekste tweedehands GameBoys
+      {% else %}
+        {{ page.name }}
+      {% endif %}
+    {% endcapture %}
+    <title>{{ page_title | strip }} | RetroWave</title>
+    {% capture meta_description %}
+      {% if page.name == 'Home' %}
+        De uniekste tweedehands GameBoys
+      {% else %}
+        {{ page.name }}
+      {% endif %}
+    {% endcapture %}
+    <meta name="description" content="{{ meta_description | strip }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ theme | theme_css_url }}" media="screen" rel="stylesheet" type="text/css">
@@ -30,19 +45,33 @@
       <div class="wrapper">
         <nav class="header-nav" role="navigation" aria-label="Main">
           <ul>
-            <li{% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' %} class="selected"{% endif %}><a href="/products">{{ pages.products.name }}</a></li>
+            <li {% if page.full_url contains '/gameboy-color' %}class="selected"{% endif %}>
+              <a href="/category/gameboy-color">GameBoy Color</a>
+            </li>
+            <li {% if page.full_url contains '/gameboy-advance' %}class="selected"{% endif %}>
+              <a href="/category/gameboy-advance">GameBoy Advance</a>
+            </li>
+            <li {% if page.full_url contains '/gameboy-pocket' %}class="selected"{% endif %}>
+              <a href="/category/gameboy-pocket">GameBoy Pocket</a>
+            </li>
+            <li {% if page.full_url contains '/gameboy-dmg' %}class="selected"{% endif %}>
+              <a href="/category/gameboy-dmg">GameBoy (DMG)</a>
+            </li>
+            <!--<li{% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' %} class="selected"{% endif %}>
+              <a href="/products">{{ pages.products.name }}</a>
+            </li>-->
             {% for page in pages.all limit:theme.nav_items %}
               <li{% if page.full_url contains page.url %} class="selected"{% endif %}>{{ page | link_to }}</li>
             {% endfor %}
             <li{% if page.full_url contains '/contact' %} class="selected"{% endif %}><a href="/contact">Contact</a></li>
-            <li{% if page.full_url contains '/cart' %} class="selected"{% endif %}><a href="/cart">Cart</a></li>
+            <li{% if page.full_url contains '/cart' %} class="selected"{% endif %}><a href="/cart">Winkelwagen</a></li>
           </ul>
         </nav>
 
         <div class="branding">
           <a href="/" title="Home">
             {% if theme.images.header != blank %}
-              <img class="store-logo" srcset="{{ theme.images.header.url | constrain: 1068, 200 }}, {{ theme.images.header.url | constrain: 2136, 400 }} 2x" src="{{ theme.images.header.url | constrain: 1068, 200 }}" alt="{{ store.name }} Home">
+              <img class="store-logo" srcset="/{{ theme.images.header.url | constrain: 1068, 200 }}, /{{ theme.images.header.url | constrain: 2136, 400 }} 2x" src="/{{ theme.images.header.url | constrain: 1068, 200 }}" alt="{{ store.name }} Home">
             {% else %}
               <div class="store-header">{{ store.name }}</div>
             {% endif %}
@@ -51,14 +80,26 @@
       </div>
       <nav class="header-nav mobile-nav" aria-label="Mobile Main" role="navigation">
         <ul>
-          <li{% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' %} class="selected"{% endif %}>
-            <a href="/products">{{ pages.products.name }}</a>
+          <li {% if page.full_url contains '/gameboy-color' %}class="selected"{% endif %}>
+            <a href="/category/gameboy-color">GameBoy Color</a>
           </li>
+          <li {% if page.full_url contains '/gameboy-advance' %}class="selected"{% endif %}>
+            <a href="/category/gameboy-advance">GameBoy Advance</a>
+          </li>
+          <li {% if page.full_url contains '/gameboy-pocket' %}class="selected"{% endif %}>
+            <a href="/category/gameboy-pocket">GameBoy Pocket</a>
+          </li>
+          <li {% if page.full_url contains '/gameboy-dmg' %}class="selected"{% endif %}>
+            <a href="/category/gameboy-dmg">GameBoy (DMG)</a>
+          </li>
+          <!--<li{% if page.full_url contains '/products' or page.full_url contains '/product/' or page.full_url contains '/category/' or page.full_url contains '/artist/' %} class="selected"{% endif %}>
+            <a href="/products">{{ pages.products.name }}</a>
+          </li>-->
           <li{% if page.full_url contains '/contact' %} class="selected"{% endif %}>
             <a href="/contact">Contact</a>
           </li>
           <li{% if page.full_url contains '/cart' %} class="selected"{% endif %}>
-            <a href="/cart">Cart</a>
+            <a href="/cart">Winkelwagen</a>
           </li>
         </ul>
       </nav>
@@ -242,9 +283,9 @@
             </ul>
           {% endif %}
           {% if store.website != blank %}
-            <a href="{{ store.website }}" class="button back-to-site" class="button">Back to site</a>
+            <a href="{{ store.website }}" class="button back-to-site">Back to site</a>
           {% endif %}
-          <div class="badge">{{ bigcartel_credit }}</div>
+          <!--<div class="badge">{{ bigcartel_credit }}</div>-->
         </nav>
       </div>
     </footer>

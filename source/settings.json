@@ -5,7 +5,8 @@
     {
       "variable": "header",
       "label": "Header image",
-      "description": "Transparent background recommended"
+      "description": "Transparent background recommended",
+      "default": "logo.png"
     },
     {
       "variable": "background",
@@ -24,7 +25,7 @@
     {
       "variable": "primary_font",
       "label": "Primary Font",
-      "default": "Varela Round"
+      "default": "Source Sans Pro"
     },
     {
       "variable": "secondary_font",
@@ -36,37 +37,37 @@
     {
       "variable": "background_color",
       "label": "Background",
-      "default": "#FFFFFF"
+      "default": "#1f1e1f"
     },
     {
       "variable": "secondary_background_color",
       "label": "Secondary background",
-      "default": "#F3F3F3"
+      "default": "#1f1e1f"
     },
     {
       "variable": "primary_text_color",
       "label": "Primary text",
-      "default": "#111111"
+      "default": "#ededed"
     },
     {
       "variable": "secondary_text_color",
       "label": "Secondary text",
-      "default": "#555555"
+      "default": "#ededed"
     },
     {
       "variable": "link_rollover_color",
       "label": "Link hover",
-      "default": "#255B8A"
+      "default": "#22c7ee"
     },
     {
       "variable": "header_text_color",
       "label": "Header text",
-      "default": "#111111"
+      "default": "#ededed"
     },
     {
       "variable": "products_background_color",
       "label": "Product background hover",
-      "default": "#333333"
+      "default": "#1f1e1f"
     },
     {
       "variable": "border_color",
@@ -76,17 +77,17 @@
     {
       "variable": "button_text_color",
       "label": "Button text",
-      "default": "#FFFFFF"
+      "default": "#ededed"
     },
     {
       "variable": "button_background_color",
       "label": "Button background",
-      "default": "#000000"
+      "default": "#22c9ee"
     },
     {
       "variable": "button_rollover_color",
       "label": "Button hover background",
-      "default": "#255B8A"
+      "default": "#8edced"
     }
   ],
   "options": [

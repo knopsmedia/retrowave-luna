@@ -1,0 +1,41 @@
+@import 'variables';
+
+.list-style-none {
+  list-style: none
+}
+
+.ps-0 {
+  padding-left: 0
+}
+
+.lh-2 {
+  line-height: 2
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-color-blue {
+  color: $links-rollover-color
+}
+
+.icon-check {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 18px;
+  width: 8px;
+  border-bottom: 4px solid #78b13f;
+  border-right: 4px solid #78b13f;
+  margin-right: 10px
+}
+
+@media (min-width: 740px) {
+  .row {
+    display: flex;
+
+    .column {
+      padding: 10px;
+    }
+  }
+}

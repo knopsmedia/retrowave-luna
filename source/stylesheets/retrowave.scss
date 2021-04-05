@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'utilities';
+
+.illustration-gaming {
+  width: 320px
+}
+
+.our-process {
+  counter-reset: counter;
+
+  h2 {
+    counter-increment: counter;
+    text-align: center;
+
+    &:before {
+      content: counter(counter);
+      padding-right: 10px;
+    }
+  }
+}
+
+.artist-category-nav {
+  li {
+    &.selected {
+      a {
+        color: $links-rollover-color;
+        text-decoration: none !important;
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+
+.footer-nav {
+  a {
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.product-list-image:only-child {
+  object-fit: contain;
+}
+
+.product-page .product-image {
+  height: 425px;
+  width: auto !important;
+  max-width: inherit !important;
+}
+
+.header-nav {
+  ul {
+    li {
+      a {
+        color: $secondary-text-color;
+      }
+      &.selected {
+        a {
+          color: $links-rollover-color;
+        }
+      }
+    }
+  }
+}
