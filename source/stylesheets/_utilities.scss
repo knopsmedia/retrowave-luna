@@ -8,6 +8,18 @@
   padding-left: 0
 }
 
+.d-flex {
+  display: flex;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .lh-2 {
   line-height: 2
 }
@@ -16,18 +28,12 @@
   text-align: start;
 }
 
-.text-color-blue {
-  color: $links-rollover-color
+.text-center {
+  text-align: center;
 }
 
-.icon-check {
-  display: inline-block;
-  transform: rotate(45deg);
-  height: 18px;
-  width: 8px;
-  border-bottom: 4px solid #78b13f;
-  border-right: 4px solid #78b13f;
-  margin-right: 10px
+.text-color-blue {
+  color: $links-rollover-color
 }
 
 @media (min-width: 740px) {

@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'utilities';
+@import 'icons';
 
 .illustration-gaming {
   width: 320px
@@ -48,6 +49,12 @@
   }
 }
 
+.product-page {
+  .add-to-cart-button {
+    margin-bottom: 24px
+  }
+}
+
 .product-list-image:only-child {
   object-fit: contain;
 }
@@ -71,8 +78,4 @@
       }
     }
   }
-}
-
-.centerpay {
-    text-align: center;
 }
